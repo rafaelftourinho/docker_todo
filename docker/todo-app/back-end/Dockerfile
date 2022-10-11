@@ -8,6 +8,8 @@ COPY package*.json .
 
 RUN npm install
 
-COPY . .
+COPY src ./src
+
+ADD ["node_modules.tar.gz", "./"]
 
 CMD ["npm", "start"]
